@@ -1,11 +1,13 @@
 package com.zharnikova.example.servlet;
 
+import com.mysql.cj.util.StringUtils;
 import com.zharnikova.example.dao.CustomerDao;
 import com.zharnikova.example.dao.DAO;
 import com.zharnikova.example.dto.CustomerDto;
 import com.zharnikova.example.mapper.CustomerMapper;
 import com.zharnikova.example.model.Customer;
 import com.zharnikova.example.service.CustomerService;
+import org.junit.Before;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -64,55 +66,55 @@ class CustomerServletTest {
         result.forEach(customer -> System.out.println(customer.getName() + " - " + customer.getEmail()));
     }
 
-//    @Test
-//    void testAddCustomer() {
-//        // Create a new customer
-//        Customer newCustomer = new Customer();
-//        newCustomer.setName("John Doe");
-//        newCustomer.setPhone("123-456-7890");
-//        newCustomer.setEmail("john.doe@example.com");
-//
-//        CustomerDao customerDao = new CustomerDao();
-//        try {
-//            // Add the customer to the database
-//            customerDao.add(newCustomer);
-//
-//            // Verify that the customer was added successfully
-//            Optional<Customer> retrievedCustomer = customerDao.getById(newCustomer.getId());
-//            assertTrue(retrievedCustomer.isPresent());
-//            assertEquals(newCustomer.getName(), retrievedCustomer.get().getName());
-//            assertEquals(newCustomer.getPhone(), retrievedCustomer.get().getPhone());
-//            assertEquals(newCustomer.getEmail(), retrievedCustomer.get().getEmail());
-//        } catch (SQLException e) {
-//
-//        }
-//    }
-//
-//    @Test
-//    void testUpdateCustomer() throws SQLException {
-//        Customer newCustomer = new Customer();
-//        newCustomer.setId(2);
-//        newCustomer.setName("John Doe");
-//        newCustomer.setPhone("123-456-7890");
-//        newCustomer.setEmail("john.doe@example.com");
-//
-//        CustomerDao customerDao = new CustomerDao();
-//        try {
-//            // Add the customer to the database
-//            customerDao.update(newCustomer);
-//
-//            // Verify that the customer was added successfully
-//            Optional<Customer> retrievedCustomer = customerDao.getById(newCustomer.getId());
-//            assertTrue(retrievedCustomer.isPresent());
-//            assertEquals(newCustomer.getId(), retrievedCustomer.get().getId());
-//            assertEquals(newCustomer.getName(), retrievedCustomer.get().getName());
-//            assertEquals(newCustomer.getPhone(), retrievedCustomer.get().getPhone());
-//            assertEquals(newCustomer.getEmail(), retrievedCustomer.get().getEmail());
-//        } catch (SQLException e) {
-//
-//        }
-//
-//    }
+    @Test
+    void testAddCustomer() {
+        // Create a new customer
+        Customer newCustomer = new Customer();
+        newCustomer.setName("John Doe");
+        newCustomer.setPhone("123-456-7890");
+        newCustomer.setEmail("john.doe@example.com");
+
+        CustomerDao customerDao = new CustomerDao();
+        try {
+            // Add the customer to the database
+            customerDao.add(newCustomer);
+
+            // Verify that the customer was added successfully
+            Optional<Customer> retrievedCustomer = customerDao.getById(newCustomer.getId());
+            assertTrue(retrievedCustomer.isPresent());
+            assertEquals(newCustomer.getName(), retrievedCustomer.get().getName());
+            assertEquals(newCustomer.getPhone(), retrievedCustomer.get().getPhone());
+            assertEquals(newCustomer.getEmail(), retrievedCustomer.get().getEmail());
+        } catch (SQLException e) {
+
+        }
+    }
+
+    @Test
+    void testUpdateCustomer() throws SQLException {
+        Customer newCustomer = new Customer();
+        newCustomer.setId(2);
+        newCustomer.setName("John Doe");
+        newCustomer.setPhone("123-456-7890");
+        newCustomer.setEmail("john.doe@example.com");
+
+        CustomerDao customerDao = new CustomerDao();
+        try {
+            // Add the customer to the database
+            customerDao.update(newCustomer);
+
+            // Verify that the customer was added successfully
+            Optional<Customer> retrievedCustomer = customerDao.getById(newCustomer.getId());
+            assertTrue(retrievedCustomer.isPresent());
+            assertEquals(newCustomer.getId(), retrievedCustomer.get().getId());
+            assertEquals(newCustomer.getName(), retrievedCustomer.get().getName());
+            assertEquals(newCustomer.getPhone(), retrievedCustomer.get().getPhone());
+            assertEquals(newCustomer.getEmail(), retrievedCustomer.get().getEmail());
+        } catch (SQLException e) {
+
+        }
+
+    }
 
 
     @Test
@@ -139,4 +141,39 @@ class CustomerServletTest {
 
         }
     }
+
+    private CustomerService customerService;
+    private CustomerMapper customerMapper;
+
+
+    @Test
+     void testGetById1() {
+
+    }
+
+
+
+    @Test
+     void testUpdate() throws Exception {
+        // Подготовка данных
+        customerService = new CustomerService();
+        int id = 1;
+        String name = "John Doe";
+        String phone = "+1234567890";
+        String email = "john@doe.com";
+        Customer customer = new Customer(id, name, phone, email);
+
+        CustomerDto customerMapper1 = CustomerMapper.mapToCustomerDto(customer);
+        customerService.update(customer);
+        assertEquals(customerService.getById(1),Optional.empty());
+        // Имитация работы сервиса
+        //when(customerService.update(customer)).thenReturn(true);
+
+        // Вызов тестируемого метода
+        //boolean result = customerService.update(customer);
+
+        // Проверка поведения
+        //assertTrue("Ожидаемое значение", result);
+    }
+
 }

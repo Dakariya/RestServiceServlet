@@ -5,13 +5,26 @@ import com.zharnikova.example.dto.ProductDto;
 import com.zharnikova.example.model.Product;
 
 import com.zharnikova.example.service.ProductService;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.powermock.api.mockito.PowerMockito;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
+import static org.mockito.Mockito.verify;
+import static org.powermock.api.mockito.PowerMockito.when;
 
 class ProductServletTest {
     @Test
@@ -51,8 +64,6 @@ class ProductServletTest {
     }
 
 
-
-
     @Test
     void testDeleteProduct() throws SQLException {
         Product newProduct = new Product();
@@ -78,5 +89,43 @@ class ProductServletTest {
         } catch (SQLException e) {
 
         }
+    }
+
+//    private HttpServletRequest mockRequest;
+//
+//    private HttpServletResponse mockResponse;
+//
+//    private RequestDispatcher mockRequestDispatcher;
+//
+//    private ProductServlet productServlet;
+
+    @Test
+    void testDoGetWithIdParameter() throws ServletException, IOException {
+        // Arrange
+//        String productId = "123"; // Example product ID
+//        when(mockRequest.getParameter("id")).thenReturn(productId);
+//        when(mockRequest.getRequestDispatcher("views/product.jsp")).thenReturn(mockRequestDispatcher);
+//
+//        // Act
+//        productServlet.doGet(mockRequest, mockResponse);
+//
+//        // Assert
+//        verify(mockRequest).setAttribute(eq("product"), any()); // Verify that the product attribute is set
+//        verify(mockRequestDispatcher).forward(mockRequest, mockResponse); // Verify forwarding
+    }
+
+    @Test
+    void testDoGetWithoutIdParameter() throws ServletException, IOException {
+//        // Arrange
+//        when(mockRequest.getParameter("id")).thenReturn(null); // No ID provided
+//        when(mockRequest.getRequestDispatcher("views/products.jsp")).thenReturn(mockRequestDispatcher);
+//
+//        // Act
+//        productServlet.doGet(mockRequest, mockResponse);
+//
+//        // Assert
+//        verify(mockRequest).setAttribute(eq("products"), any()); // Verify that the products attribute is set
+//        verify(mockRequestDispatcher).forward(mockRequest, mockResponse); // Verify forwarding
+//    }
     }
 }

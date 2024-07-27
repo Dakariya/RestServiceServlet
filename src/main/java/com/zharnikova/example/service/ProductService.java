@@ -59,11 +59,7 @@ public class ProductService {
     public Optional<Product> getById(int id) {
         return productDao.getById(id);
     }
-//    public ProductDto getProductWitsCustomers(Integer productId) {
-//        ProductRepository productRepository = new ProductRepository();
-//        Product productWithCustomer = productRepository.getProductWithCustomer(productId);
-//        return ProductMapper.mapToProductDto(productWithCustomer);
-//    }
+
 
     public List<CustomerProductDto> getCustomerProductNamesAll() {
         ProductRepository productRepository = new ProductRepository();

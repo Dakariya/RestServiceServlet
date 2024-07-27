@@ -31,7 +31,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
        ProductDao productDao = new ProductDao();
 
        // Act: Call the method with a specific customer ID
-       int productIdToRetrieve = 1; // Replace with an actual customer ID
+       int productIdToRetrieve = 12; // Replace with an actual customer ID
        Optional<Product> result = productDao.getById(productIdToRetrieve);
 
        // Assert: Verify the expected behavior
@@ -102,7 +102,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
     @Test
     void testUpdateProduct() throws SQLException {
        Product newProduct = new Product();
-       newProduct.setId(3);
+       newProduct.setId(10);
        newProduct.setName("watermelon");
        newProduct.setDescription("yellow");
        newProduct.setPrice(56.6);

@@ -91,9 +91,4 @@ public class CustomerDao implements DAO<Customer> {
             preparedStatement.setInt(1, id);
             int updatedStrings = preparedStatement.executeUpdate();
             if (updatedStrings < 1) {
-                throw new SQLException();
-            }
-
-        }
-    }
-}
+                throw new SQLException();}}}}
