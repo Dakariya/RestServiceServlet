@@ -1,9 +1,8 @@
 package com.zharnikova.example.dao;
 
-import com.zharnikova.example.ConnectionUtil;
+import com.zharnikova.example.DataSource;
 import com.zharnikova.example.model.Customer;
 
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -18,16 +17,15 @@ public class CustomerDao implements DAO<Customer> {
     private static final String UPDATE_CUSTOMER_QUERY = "UPDATE customer SET name = ?, phone = ?, email = ? WHERE id = ?";
     private static final String DELETE_CUSTOMER_QUERY = "DELETE FROM customer WHERE id = ?";
 
-    private final Connection connection;
+
 
     public CustomerDao() {
-        this.connection = ConnectionUtil.instance();
     }
 
     @Override
     public List<Customer> getAll() throws SQLException {
         List<Customer> customers = new ArrayList<>();
-        try (PreparedStatement preparedStatement = connection.prepareStatement(GET_ALL_CUSTOMERS_QUERY);
+        try (PreparedStatement preparedStatement = DataSource.getConnection().prepareStatement(GET_ALL_CUSTOMERS_QUERY);
              ResultSet resultSet = preparedStatement.executeQuery()) {
             while (resultSet.next()) {
                 Customer customer = new Customer();
@@ -43,7 +41,7 @@ public class CustomerDao implements DAO<Customer> {
 
     @Override
     public Optional<Customer> getById(int id) {
-        try (PreparedStatement preparedStatement = connection.prepareStatement(GET_CUSTOMER_BY_ID_QUERY)) {
+        try (PreparedStatement preparedStatement = DataSource.getConnection().prepareStatement(GET_CUSTOMER_BY_ID_QUERY)) {
             preparedStatement.setInt(1, id);
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
                 Customer customer;
@@ -66,17 +64,18 @@ public class CustomerDao implements DAO<Customer> {
 
     @Override
     public void add(Customer customer) throws SQLException {
-        try (PreparedStatement preparedStatement = connection.prepareStatement(ADD_CUSTOMER_QUERY)) {
+        try (PreparedStatement preparedStatement = DataSource.getConnection().prepareStatement(ADD_CUSTOMER_QUERY)) {
             preparedStatement.setString(1, customer.getName());
             preparedStatement.setString(2, customer.getPhone());
             preparedStatement.setString(3, customer.getEmail());
             preparedStatement.executeUpdate();
         }
+
     }
 
     @Override
     public void update(Customer customer) throws SQLException {
-        try (PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_CUSTOMER_QUERY)) {
+        try (PreparedStatement preparedStatement = DataSource.getConnection().prepareStatement(UPDATE_CUSTOMER_QUERY)) {
             preparedStatement.setString(1, customer.getName());
             preparedStatement.setString(2, customer.getPhone());
             preparedStatement.setString(3, customer.getEmail());
@@ -88,7 +87,7 @@ public class CustomerDao implements DAO<Customer> {
 
     @Override
     public void delete(int id) throws SQLException {
-        try (PreparedStatement preparedStatement = connection.prepareStatement(DELETE_CUSTOMER_QUERY)) {
+        try (PreparedStatement preparedStatement = DataSource.getConnection().prepareStatement(DELETE_CUSTOMER_QUERY)) {
             preparedStatement.setInt(1, id);
             int updatedStrings = preparedStatement.executeUpdate();
             if (updatedStrings < 1) {

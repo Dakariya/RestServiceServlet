@@ -1,0 +1,27 @@
+
+CREATE TABLE customer_products ( //manyToMany
+    customer_id INT,
+    product_id INT,
+    PRIMARY KEY (customer_id, product_id),
+    FOREIGN KEY (customer_id) REFERENCES customer(id),
+    FOREIGN KEY (product_id) REFERENCES product(id)
+);
+
+"SELECT c.id, c.name, p.id, p.name as product_id, p.product_name " //getAll manyToMany
+                     + "FROM customers c "
+                     + "LEFT JOIN customer_products cp ON c.id = cp.customer_id "
+                     + "LEFT JOIN product p ON cp.product_id = p.id";
+
+
+
+
+
+CREATE TABLE Customer ( //oneToMany
+    id INT PRIMARY KEY,
+    name VARCHAR(255),
+    phone VARCHAR(255),
+    FOREIGN KEY (product_id) REFERENCES Product(id)
+);
+
+String Product = "SELECT * FROM Product WHERE id = ?";
+String Customer = "SELECT * FROM Customer WHERE product_id = ?";

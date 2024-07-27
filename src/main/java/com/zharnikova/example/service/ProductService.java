@@ -1,21 +1,26 @@
 package com.zharnikova.example.service;
 
 import com.zharnikova.example.dao.ProductDao;
+import com.zharnikova.example.dto.CustomerProductDto;
 import com.zharnikova.example.dto.ProductDto;
+import com.zharnikova.example.mapper.CustomerProductMapper;
 import com.zharnikova.example.mapper.ProductMapper;
+import com.zharnikova.example.model.CustomersProducts;
 import com.zharnikova.example.model.Product;
 import com.zharnikova.example.repository.ProductRepository;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
 public class ProductService {
-    private ProductDao productDao;
-    private ProductRepository productRepository;
+    private final ProductDao productDao;
 
-    public ProductService(){this.productDao=new ProductDao();}
+    public ProductService() {
+        this.productDao = new ProductDao();
+    }
 
     public List<ProductDto> getAll() {
         List<Product> all = null;
@@ -26,6 +31,7 @@ public class ProductService {
         }
         return all.stream().map(ProductMapper::mapToProductDto).toList();
     }
+
     public void delete(int id) {
         try {
             productDao.delete(id);
@@ -33,6 +39,7 @@ public class ProductService {
             throw new RuntimeException(e);
         }
     }
+
     public void add(Product product) {
         try {
             productDao.add(product);
@@ -40,6 +47,7 @@ public class ProductService {
             throw new RuntimeException(e);
         }
     }
+
     public void update(Product product) {
         try {
             productDao.update(product);
@@ -47,11 +55,23 @@ public class ProductService {
             throw new RuntimeException(e);
         }
     }
+
     public Optional<Product> getById(int id) {
         return productDao.getById(id);
     }
-    public ProductDto getProductWitsCustomers(Integer productId) {
-        Product productWithCustomer = productRepository.getProductWithCustomer(productId);
-        return ProductMapper.mapToProductDto(productWithCustomer);
+//    public ProductDto getProductWitsCustomers(Integer productId) {
+//        ProductRepository productRepository = new ProductRepository();
+//        Product productWithCustomer = productRepository.getProductWithCustomer(productId);
+//        return ProductMapper.mapToProductDto(productWithCustomer);
+//    }
+
+    public List<CustomerProductDto> getCustomerProductNamesAll() {
+        ProductRepository productRepository = new ProductRepository();
+        List<CustomersProducts> all = null;
+        try {
+            all = productRepository.getCustomerProductNames();
+        } catch (SQLException e) {
+            return Collections.emptyList();
+        } return all.stream().map(CustomerProductMapper::mapToCustomerProductDto).toList();
     }
 }

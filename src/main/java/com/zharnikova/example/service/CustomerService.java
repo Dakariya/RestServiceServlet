@@ -11,11 +11,12 @@ import java.util.List;
 import java.util.Optional;
 
 public class CustomerService {
-    private  CustomerDao customerDao;
+    private final CustomerDao customerDao;
 
     public CustomerService() {
         this.customerDao = new CustomerDao();
     }
+
 
     public List<CustomerDto> getAll() {
         List<Customer> all = null;

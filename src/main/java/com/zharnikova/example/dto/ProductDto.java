@@ -65,13 +65,7 @@ public class ProductDto {
         this.stock = stock;
     }
 
-    public List<CustomerDto> getCustomers() {
-        return customers;
-    }
 
-    public void setCustomers(List<CustomerDto> customers) {
-        this.customers = customers;
-    }
 
     @Override
     public boolean equals(Object object) {
