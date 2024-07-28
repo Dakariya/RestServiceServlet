@@ -2,11 +2,13 @@ package com.zharnikova.example.service;
 
 
 import com.zharnikova.example.dao.CustomerDao;
+import com.zharnikova.example.dao.DAO;
 import com.zharnikova.example.dto.CustomerDto;
 import com.zharnikova.example.mapper.CustomerMapper;
 import com.zharnikova.example.model.Customer;
 
 import org.junit.Before;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -14,6 +16,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
+import java.lang.reflect.Field;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -26,12 +29,60 @@ import static org.mockito.Mockito.*;
 
 class CustomerServiceTest {
 
-    private final CustomerDao customerDao = new CustomerDao();
-    private final CustomerService customerService = new CustomerService();
+    private CustomerDao customerDao;
+    private CustomerService customerService;
+
+    @BeforeEach
+    public void setUp() {
+        customerDao = mock(CustomerDao.class);
+        customerService = new CustomerService();
+    }
+
+    @Test
+    public void testGetAll() throws SQLException {
+        Customer customer = new Customer();
+        when(customerDao.getAll()).thenReturn(Collections.singletonList(customer));
+
+        List<CustomerDto> customers = customerService.getAll();
+        assertEquals(1, customers.size());
+    }
+
+    @Test
+    public void testGetById() throws SQLException {
+        Customer customer = new Customer();
+        when(customerDao.getById(1)).thenReturn(Optional.of(customer));
+
+        Optional<Customer> result = customerService.getById(1);
+        assertTrue(result.isPresent());
+    }
+
+    @Test
+    public void testAdd() throws SQLException {
+        Customer customer = new Customer();
+        doNothing().when(customerDao).add(customer);
+
+        assertDoesNotThrow(() -> customerService.add(customer));
+    }
+
+    @Test
+    public void testUpdate() throws SQLException {
+        Customer customer = new Customer();
+        doNothing().when(customerDao).update(customer);
+
+        assertDoesNotThrow(() -> customerService.update(customer));
+    }
+
+    @Test
+    public void testDeleteCustomer() throws SQLException {
+        doNothing().when(customerDao).delete(1);
+
+        assertDoesNotThrow(() -> customerService.deleteCustomer(1));
+    }
+
 
 
     @Test
-    void testGetAll() throws SQLException {
+    void testGetAll1() throws SQLException {
         List<Customer> customers = new ArrayList<>();
         Customer customer = new Customer();
         customer.setId(1);
@@ -46,7 +97,7 @@ class CustomerServiceTest {
     }
 
     @Test
-    void testGetById() {
+    void testGetById1() {
 
         // Arrange
         int customerId = 2;
@@ -65,7 +116,7 @@ class CustomerServiceTest {
 
 
     @Test
-     void testUpdate() throws Exception {
+     void testUpdate1() throws Exception {
         // Подготовка данных
         List<Customer> customers = new ArrayList<>();
         Customer customer1 = new Customer(1,"Ivan","Ivanov","and.com");

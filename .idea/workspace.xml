@@ -10,16 +10,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c92312cd-8166-480f-9774-05b51fcb4a4b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/out/artifacts/RestServiceServlet_jar/RestServiceServlet.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/sql/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cbddb895-c227-41d4-a679-41468332a048.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cbddb895-c227-41d4-a679-41468332a048/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cbddb895-c227-41d4-a679-41468332a048/storage_v2/_src_/schema/mydb.Kl8zAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cbddb895-c227-41d4-a679-41468332a048/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cbddb895-c227-41d4-a679-41468332a048/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/dao/CustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/dao/CustomerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/dao/ProductDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/dao/ProductDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/model/ProductTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/model/ProductTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/DataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/DataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/dao/CustomerDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/dao/CustomerDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/repository/ProductRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/repository/ProductRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/service/CustomerServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/service/CustomerServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/servlet/CustomerServletTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/servlet/CustomerServletTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/servlet/CustomersProdServletTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/servlet/CustomersProdServletTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/servlet/ProductServletTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/servlet/ProductServletTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/service/ProductServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/service/ProductServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +41,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -39,6 +50,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -46,9 +60,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2jkdvLddoMfDt5o2lXmC7xD8hDK" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -57,6 +71,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Application.MyApp.executor": "Debug",
     "JUnit.All in RestServiceServlet (1).executor": "Coverage",
     "JUnit.All in RestServiceServlet (2).executor": "Coverage",
     "JUnit.All in RestServiceServlet.executor": "Coverage",
@@ -67,6 +82,7 @@
     "JUnit.CustomerDaoTest.testDeleteCustomer_Failure.executor": "Run",
     "JUnit.CustomerDaoTest.testDeleteCustomer_Success.executor": "Run",
     "JUnit.CustomerDaoTest.testGetAll.executor": "Run",
+    "JUnit.CustomerDaoTest.testGetAll1.executor": "Run",
     "JUnit.CustomerDaoTest.testGetById.executor": "Run",
     "JUnit.CustomerDaoTest.testGetConnection.executor": "Debug",
     "JUnit.CustomerDaoTest.testUpdateCustomer.executor": "Run",
@@ -92,6 +108,7 @@
     "JUnit.CustomerServiceTest.getById.executor": "Run",
     "JUnit.CustomerServiceTest.getByIdTest.executor": "Run",
     "JUnit.CustomerServiceTest.getConnection.executor": "Run",
+    "JUnit.CustomerServiceTest.testAdd.executor": "Run",
     "JUnit.CustomerServiceTest.testGetAll.executor": "Debug",
     "JUnit.CustomerServiceTest.testGetAllCustomers.executor": "Debug",
     "JUnit.CustomerServiceTest.testGetById.executor": "Run",
@@ -144,8 +161,15 @@
     "JUnit.ProductMapperTest.MapProductToProductDto.executor": "Run",
     "JUnit.ProductMapperTest.shouldMapProductDtoToProduct.executor": "Run",
     "JUnit.ProductRepositoryTest.testGetCustomerProductNames.executor": "Run",
+    "JUnit.ProductRepositoryTest.testGetCustomerProductNames1.executor": "Run",
     "JUnit.ProductServiceTest.executor": "Run",
-    "JUnit.ProductServiceTest.testGetCustomerProductNamesAll.executor": "Debug",
+    "JUnit.ProductServiceTest.testAdd.executor": "Run",
+    "JUnit.ProductServiceTest.testDelete.executor": "Run",
+    "JUnit.ProductServiceTest.testGetAll.executor": "Run",
+    "JUnit.ProductServiceTest.testGetAllSQLException.executor": "Run",
+    "JUnit.ProductServiceTest.testGetById.executor": "Run",
+    "JUnit.ProductServiceTest.testGetCustomerProductNamesAll.executor": "Run",
+    "JUnit.ProductServiceTest.testUpdate.executor": "Run",
     "JUnit.ProductServletTest.testDeleteProduct.executor": "Run",
     "JUnit.ProductServletTest.testDoGetWithIdParameter.executor": "Run",
     "JUnit.ProductServletTest.testDoGetWithoutIdParameter.executor": "Run",
@@ -163,11 +187,10 @@
     "Maven.RestServiceServlet [test].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat Server.Tomcat .executor": "Debug",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/zharn/IdeaProjects/RestServiceServlet",
@@ -176,6 +199,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.608046",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   },
@@ -189,6 +215,13 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zharn\IdeaProjects\RestServiceServlet\src\main\java\com\zharnikova\example\sql\data" />
+      <recent name="C:\Users\zharn\IdeaProjects\RestServiceServlet\src\main\java\com\zharnikova\example\sql" />
+      <recent name="C:\Users\zharn\IdeaProjects\RestServiceServlet" />
+      <recent name="C:\Users\zharn\IdeaProjects\RestServiceServlet\target" />
+      <recent name="C:\Users\zharn\IdeaProjects\RestServiceServlet\src\main\resources\sql" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.zharnikova.example.service" />
       <recent name="com.zharnikova.example.servlet" />
@@ -197,55 +230,7 @@
       <recent name="com.zharnikova.example.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyTest.testGetConnection">
-    <configuration name="CustomerServiceTest.testGetAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RestServiceServlet" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zharnikova.example.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.zharnikova.example.service" />
-      <option name="MAIN_CLASS_NAME" value="com.zharnikova.example.service.CustomerServiceTest" />
-      <option name="METHOD_NAME" value="testGetAll" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomerServiceTest.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RestServiceServlet" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zharnikova.example.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.zharnikova.example.service" />
-      <option name="MAIN_CLASS_NAME" value="com.zharnikova.example.service.CustomerServiceTest" />
-      <option name="METHOD_NAME" value="testUpdate" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyTest.testGetConnection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RestServiceServlet" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zharnikova.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.zharnikova.example" />
-      <option name="MAIN_CLASS_NAME" value="com.zharnikova.example.MyTest" />
-      <option name="METHOD_NAME" value="testGetConnection" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ProductServiceTest.testGetAll">
     <configuration name="ProductServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestServiceServlet" />
       <extension name="coverage">
@@ -261,7 +246,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductServiceTest.testGetCustomerProductNamesAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductServiceTest.testAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestServiceServlet" />
       <extension name="coverage">
         <pattern>
@@ -271,7 +256,55 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.zharnikova.example.service" />
       <option name="MAIN_CLASS_NAME" value="com.zharnikova.example.service.ProductServiceTest" />
-      <option name="METHOD_NAME" value="testGetCustomerProductNamesAll" />
+      <option name="METHOD_NAME" value="testAdd" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceTest.testGetAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestServiceServlet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zharnikova.example.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zharnikova.example.service" />
+      <option name="MAIN_CLASS_NAME" value="com.zharnikova.example.service.ProductServiceTest" />
+      <option name="METHOD_NAME" value="testGetAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceTest.testGetById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestServiceServlet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zharnikova.example.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zharnikova.example.service" />
+      <option name="MAIN_CLASS_NAME" value="com.zharnikova.example.service.ProductServiceTest" />
+      <option name="METHOD_NAME" value="testGetById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceTest.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestServiceServlet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zharnikova.example.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zharnikova.example.service" />
+      <option name="MAIN_CLASS_NAME" value="com.zharnikova.example.service.ProductServiceTest" />
+      <option name="METHOD_NAME" value="testUpdate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -288,7 +321,6 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="8d729ba6-f7c4-40d6-92a9-71ea3e45ab88" />
-        <option name="HTTP_PORT" value="8888" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -366,20 +398,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.CustomerServiceTest.testGetAll" />
-      <item itemvalue="JUnit.CustomerServiceTest.testUpdate" />
-      <item itemvalue="JUnit.MyTest.testGetConnection" />
       <item itemvalue="JUnit.ProductServiceTest" />
-      <item itemvalue="JUnit.ProductServiceTest.testGetCustomerProductNamesAll" />
+      <item itemvalue="JUnit.ProductServiceTest.testAdd" />
+      <item itemvalue="JUnit.ProductServiceTest.testGetAll" />
+      <item itemvalue="JUnit.ProductServiceTest.testGetById" />
+      <item itemvalue="JUnit.ProductServiceTest.testUpdate" />
       <item itemvalue="Tomcat Server.Tomcat " />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MyTest.testGetConnection" />
-        <item itemvalue="JUnit.CustomerServiceTest.testUpdate" />
-        <item itemvalue="JUnit.CustomerServiceTest.testGetAll" />
-        <item itemvalue="JUnit.ProductServiceTest.testGetCustomerProductNamesAll" />
+        <item itemvalue="JUnit.ProductServiceTest.testGetAll" />
         <item itemvalue="JUnit.ProductServiceTest" />
+        <item itemvalue="JUnit.ProductServiceTest.testGetById" />
+        <item itemvalue="JUnit.ProductServiceTest.testUpdate" />
+        <item itemvalue="JUnit.ProductServiceTest.testAdd" />
       </list>
     </recent_temporary>
   </component>
@@ -398,23 +430,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1721935238494</updated>
-      <workItem from="1721935239474" duration="78512000" />
+      <workItem from="1721935239474" duration="79474000" />
+      <workItem from="1722146533908" duration="27738000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/zharnikova/example/service/ProductServiceTest.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RestServiceServlet$All_in_RestServiceServlet__1_.ic" NAME="All in RestServiceServlet (1) Coverage Results" MODIFIED="1722091780709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

@@ -16,7 +16,7 @@ public abstract class DataSource {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-        config.setJdbcUrl("jdbc:mysql://localhost:3306/mydb");
+        config.setJdbcUrl("jdbc:mysql://localhost:3306/mydb?allowPublicKeyRetrieval=true&useSSL=false");
         config.setUsername("root");
         config.setPassword("E65@pop3!");
         config.addDataSourceProperty("cachePrepStmts", "true");

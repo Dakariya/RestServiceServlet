@@ -1,10 +1,22 @@
 package com.zharnikova.example.dao;
 
+import com.github.dockerjava.api.model.ExposedPort;
+import com.github.dockerjava.api.model.HostConfig;
+import com.github.dockerjava.api.model.PortBinding;
+import com.github.dockerjava.api.model.Ports;
 import com.zharnikova.example.model.Customer;
 
-import org.junit.jupiter.api.Test;
+import com.zharnikova.example.model.CustomersProducts;
+import com.zharnikova.example.repository.ProductRepository;
+import org.junit.jupiter.api.*;
+import org.testcontainers.containers.MySQLContainer;
+import org.testcontainers.ext.ScriptUtils;
+import org.testcontainers.jdbc.JdbcDatabaseDelegate;
+import org.testcontainers.junit.jupiter.Container;
+import org.testcontainers.junit.jupiter.Testcontainers;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,9 +25,44 @@ import static org.assertj.core.api.Fail.fail;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-
+@Testcontainers
+@Tag("DockerRequired")
  class CustomerDaoTest {
 
+    private static final String INIT_SQL = "sql/schema.sql";
+    public static CustomerDao customerDao;
+    private static int containerPort = 5432;
+    private static int localPort = 5432;
+
+    @Container
+    public static MySQLContainer<?> container = new MySQLContainer<>("servlet")
+            .withDatabaseName("mydb")
+            .withUsername("root")
+            .withPassword("E65@pop3!")
+            .withExposedPorts(containerPort)
+            .withCreateContainerCmdModifier(cmd -> cmd.withHostConfig(
+                    new HostConfig().withPortBindings(new PortBinding(Ports.Binding.bindPort(localPort), new ExposedPort(containerPort)))
+            ))
+            .withInitScript(INIT_SQL);
+
+    private static JdbcDatabaseDelegate jdbcDatabaseDelegate;
+
+    @BeforeAll
+    static void beforeAll() {
+        container.start();
+        customerDao = new CustomerDao();
+        jdbcDatabaseDelegate = new JdbcDatabaseDelegate(container, "");
+    }
+
+    @AfterAll
+    static void afterAll() {
+        container.stop();
+    }
+
+    @BeforeEach
+    void setUp() {
+        ScriptUtils.runInitScript(jdbcDatabaseDelegate, INIT_SQL);
+    }
      @Test
      void testGetById() {
          // Arrange: Create an instance of CustomerDao (assuming it's properly initialized)
@@ -34,6 +81,7 @@ import static org.junit.jupiter.api.Assertions.*;
          // Optional: Print the retrieved customer details for debugging
          System.out.println("Retrieved customer: " + retrievedCustomer.getName() + " - " + retrievedCustomer.getEmail());
      }
+
 
      @Test
      void testGetAll() {
@@ -133,4 +181,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
          }
      }
+
+    @Test
+    void testGetAll1() throws SQLException {
+        int expectedSize = 7;
+        int resultSize = customerDao.getAll().size();
+
+        Assertions.assertEquals(expectedSize, resultSize);
+    }
  }

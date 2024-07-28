@@ -1,83 +1,123 @@
 package com.zharnikova.example.service;
 
+import com.zharnikova.example.DataSource;
 import com.zharnikova.example.dao.CustomerDao;
 import com.zharnikova.example.dao.ProductDao;
+import com.zharnikova.example.dto.CustomerDto;
 import com.zharnikova.example.dto.CustomerProductDto;
+import com.zharnikova.example.dto.ProductDto;
 import com.zharnikova.example.mapper.CustomerProductMapper;
+import com.zharnikova.example.model.Customer;
 import com.zharnikova.example.model.CustomersProducts;
+import com.zharnikova.example.model.Product;
 import com.zharnikova.example.repository.ProductRepository;
 import org.junit.Before;
-import org.junit.jupiter.api.BeforeEach;
+
 import org.junit.jupiter.api.Test;
 
+import java.sql.SQLException;
+
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
-import static org.powermock.api.mockito.PowerMockito.mock;
-
-class ProductServiceTest {
-    private final ProductDao productDao = new ProductDao();
-    private final ProductService productService = new ProductService();
+import static org.powermock.api.mockito.PowerMockito.doNothing;
 
 
-//    @Test
-//    void testGetAll() throws SQLException {
-//        List<Customer> customers = new ArrayList<>();
-//        Customer customer = new Customer();
-//        customer.setId(1);
-//        customer.setName("Olga");
-//        customer.setEmail("olga@example.com");
-//        customer.setPhone("+7984098543");
-//        customers.add(customer);
-//        customers = customerDao.getAll();
-//        when(customers).thenReturn(customers);
-//        verify(customerDao,times(1)).getAll();
-//
-//    }
+import static org.mockito.Mockito.*;
 
-//    @Test
-//    void testGetById() {
-//
-//        // Arrange
-//        int customerId = 2;
-//        Customer mockCustomer = new Customer();
-//        when(customerDao.getById(customerId)).thenReturn(Optional.of(mockCustomer));
-//
-//        // Act
-//        Optional<Customer> result = customerService.getById(customerId);
-//
-//        // Assert
-//        assertEquals(mockCustomer, result.orElse(null));
-//        // Add more assertions as needed
-//    }
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
-    // Add similar test methods for other service methods (add, update, delete)
+import org.powermock.core.classloader.annotations.PrepareForTest;
+import org.powermock.modules.junit4.PowerMockRunner;
 
-    // Remember to handle exceptions appropriately in your service methods!
 
-    private ProductService customerProductService;
+@RunWith(PowerMockRunner.class)
+@PrepareForTest({ProductDao.class, ProductRepository.class})
+ class ProductServiceTest {
+
+    @Mock
+    private ProductDao productDao;
+
+    @Mock
     private ProductRepository productRepository;
-    private CustomerProductMapper customerProductMapper;
+
+    @InjectMocks
+    private ProductService productService;
+
+    @Before
+    public void setUp() {
+        MockitoAnnotations.initMocks(this);
+    }
 
     @Test
-     void testGetCustomerProductNamesAll() throws Exception {
-        // Подготовка данных
-        List<CustomersProducts> customersProducts = new ArrayList<>();
-        customersProducts.add(new CustomersProducts());
+     void testGetAll() throws SQLException {
+        List<Product> products = Collections.singletonList(new Product(1, "product","description",20.0,10));
+        when(productDao.getAll()).thenReturn(products);
+        assertNull(productDao.getAll());
+        List<ProductDto> result = productService.getAll();
 
-        // Имитация работы репозитория
-        when(productRepository.getCustomerProductNames()).thenReturn(customersProducts);
-
-        // Имитация работы картографа
-        //when(customerProductMapper.mapToCustomerProductDto(any())).thenReturn(new CustomerProductDto());
-
-        // Вызов тестируемого метода
-       // List<CustomerProductDto> customerProductDtos = customerProductService.getCustomerProductNamesAll();
-
-        // Проверка поведения
-        //assertEquals("Ожидаемое значение", actualValue, expectedValue);
+        assertNotNull(result);
+        assertEquals(1, result.size());
+        assertEquals("Test Product", result.get(0).getName());
     }
+
+    @Test
+     void testDelete() throws SQLException {
+        doNothing().when(productDao).delete(1);
+
+        productService.delete(1);
+
+        verify(productDao, times(1)).delete(1);
+    }
+
+    @Test
+     void testAdd() throws SQLException {
+        Product product = new Product(1, "product","description",20.0,10);
+        doNothing().when(productDao).add(product);
+
+        productService.add(product);
+
+        verify(productDao, times(1)).add(product);
+    }
+
+    @Test
+     void testUpdate() throws SQLException {
+        Product product = new Product(1, "product","description",20.0,10);
+        doNothing().when(productDao).update(product);
+
+        productService.update(product);
+
+        verify(productDao, times(1)).update(product);
+    }
+
+    @Test
+     void testGetById() throws SQLException {
+        Product product = new Product(1, "product","description",20.0,10);
+        when(productDao.getById(1)).thenReturn(Optional.of(product));
+
+        Optional<Product> result = productService.getById(1);
+
+        assertTrue(result.isPresent());
+        assertEquals("Test Product", result.get().getName());
+    }
+
+//    @Test
+//     void testGetCustomerProductNamesAll() throws SQLException {
+//        List<CustomersProducts> customersProducts = Collections.singletonList(new CustomersProducts( "Customer", "Product"));
+//        when(productRepository.getCustomerProductNames()).thenReturn(customersProducts);
+//
+//        List<CustomerProductDto> result = productService.getCustomerProductNamesAll();
+//
+//        assertNotNull(result);
+//        assertEquals(1, result.size());
+//        assertEquals("Customer", result.get(0).getCustomerName());
+//        assertEquals("Product", result.get(0).getProductName());
+//    }
 }
