@@ -2,6 +2,7 @@ package com.zharnikova.example.dao;
 
 import com.zharnikova.example.DataSource;
 import com.zharnikova.example.model.Customer;
+import com.zharnikova.example.service.CustomerService;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -21,6 +22,7 @@ public class CustomerDao implements DAO<Customer> {
 
     public CustomerDao() {
     }
+
 
     @Override
     public List<Customer> getAll() throws SQLException {

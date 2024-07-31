@@ -1,142 +1,109 @@
 package com.zharnikova.example.service;
 
-
 import com.zharnikova.example.dao.CustomerDao;
-import com.zharnikova.example.dao.DAO;
 import com.zharnikova.example.dto.CustomerDto;
-import com.zharnikova.example.mapper.CustomerMapper;
 import com.zharnikova.example.model.Customer;
-
-import org.junit.Before;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.lang.reflect.Field;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.doNothing;
+import static org.powermock.api.mockito.PowerMockito.when;
 
-
+@ExtendWith(MockitoExtension.class)
 class CustomerServiceTest {
 
+    @Mock
     private CustomerDao customerDao;
+
+    @InjectMocks
     private CustomerService customerService;
 
     @BeforeEach
     public void setUp() {
-        customerDao = mock(CustomerDao.class);
-        customerService = new CustomerService();
+        MockitoAnnotations.openMocks(this);
     }
 
     @Test
-    public void testGetAll() throws SQLException {
-        Customer customer = new Customer();
-        when(customerDao.getAll()).thenReturn(Collections.singletonList(customer));
+     void testGetAll() throws SQLException {
+        Customer customer1 = new Customer(1, "John Doe","+789885579","john@example.com");
+        Customer customer2 = new Customer(2, "Jane Doe", "+789885580","jane@example.com");
+        when(customerDao.getAll()).thenReturn(Arrays.asList(customer1, customer2));
 
-        List<CustomerDto> customers = customerService.getAll();
-        assertEquals(1, customers.size());
+        List<CustomerDto> result = customerService.getAll();
+
+        assertNotNull(result);
+        assertEquals(2, result.size());
+        assertEquals("John Doe", result.get(0).getName());
+        assertEquals("Jane Doe", result.get(1).getName());
     }
 
     @Test
-    public void testGetById() throws SQLException {
-        Customer customer = new Customer();
+     void testGetAllSQLException() throws SQLException {
+        when(customerDao.getAll()).thenThrow(new SQLException());
+
+        List<CustomerDto> result = customerService.getAll();
+
+        assertNotNull(result);
+        assertTrue(result.isEmpty());
+    }
+
+    @Test
+     void testGetById() throws SQLException {
+        Customer customer = new Customer(1, "John Doe","+789885579","john@example.com");
         when(customerDao.getById(1)).thenReturn(Optional.of(customer));
 
         Optional<Customer> result = customerService.getById(1);
+
         assertTrue(result.isPresent());
+        assertEquals("John Doe", result.get().getName());
+        assertEquals("+789885579", result.get().getPhone());
+        assertEquals("john@example.com", result.get().getEmail());
     }
 
     @Test
-    public void testAdd() throws SQLException {
-        Customer customer = new Customer();
+     void testAdd() throws SQLException {
+        Customer customer = new Customer(1, "John Doe","+789885579","john@example.com");
         doNothing().when(customerDao).add(customer);
 
         assertDoesNotThrow(() -> customerService.add(customer));
     }
 
     @Test
-    public void testUpdate() throws SQLException {
-        Customer customer = new Customer();
+     void testUpdate() throws SQLException {
+        Customer customer = new Customer(1, "John Doe","+789885579","john@example.com");
         doNothing().when(customerDao).update(customer);
 
         assertDoesNotThrow(() -> customerService.update(customer));
     }
-
-    @Test
-    public void testDeleteCustomer() throws SQLException {
-        doNothing().when(customerDao).delete(1);
-
-        assertDoesNotThrow(() -> customerService.deleteCustomer(1));
-    }
-
-
-
-    @Test
-    void testGetAll1() throws SQLException {
-        List<Customer> customers = new ArrayList<>();
-        Customer customer = new Customer();
-        customer.setId(1);
-        customer.setName("Olga");
-        customer.setEmail("olga@example.com");
-        customer.setPhone("+7984098543");
-        customers.add(customer);
-        List<Customer> customers1 = customerDao.getAll();
-//       when(customers).thenReturn(customers1);
-//        verify(customerDao,times(1)).getAll();
-
-    }
-
-    @Test
-    void testGetById1() {
-
-        // Arrange
-        int customerId = 2;
-        Customer mockCustomer = new Customer();
-//        when(customerDao.getById(customerId)).thenReturn(Optional.of(mockCustomer));
-
-        // Act
-        Optional<Customer> result = customerService.getById(customerId);
-
-        // Assert
-        //assertEquals(mockCustomer, result.orElse(null));
-        // Add more assertions as needed
-    }
-
-
-
-
-    @Test
-     void testUpdate1() throws Exception {
-        // Подготовка данных
-        List<Customer> customers = new ArrayList<>();
-        Customer customer1 = new Customer(1,"Ivan","Ivanov","and.com");
-        Customer customer2 = new Customer(2,"Ivan","Ivanov","and.com");
-        Customer customer3 = new Customer(3,"Ivan","Ivanov","and.com");
-        customers.add(customer1);
-        customers.add(customer2);
-        customers.add(customer3);
-        int id = 1;
-        String name = "John Doe";
-        String phone = "+1234567890";
-        String email = "john@doe.com";
-        Customer customer = new Customer(id, name, phone, email);
-        customerService.update(customer);
-        customerService.getById(1);
-        // Имитация работы сервиса
-
-
-    }
+//
+//    @Test
+//    public void testDeleteCustomer() throws SQLException {
+//        doNothing().when(customerDao).delete(1);
+//
+//        assertDoesNotThrow(() -> customerService.deleteCustomer(1));
+//    }
+//}
+//    @Mock
+//    List mockList;
+//
+//    @Test
+//    void whenMockAnnotation() {
+//        //создаем правило: вернуть 10 при вызове метода size
+//        Mockito.when(mockList.size() ).thenReturn(10);
+//
+//        //тут вызывается метод и вернет 10!!
+//        assertEquals(10, mockList.size());
+//    }
 }
-
-
-

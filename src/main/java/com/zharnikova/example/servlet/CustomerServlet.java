@@ -2,6 +2,7 @@ package com.zharnikova.example.servlet;
 
 
 import com.mysql.cj.util.StringUtils;
+import com.zharnikova.example.dao.CustomerDao;
 import com.zharnikova.example.dto.CustomerDto;
 import com.zharnikova.example.mapper.CustomerMapper;
 import com.zharnikova.example.mapper.ProductMapper;
@@ -18,7 +19,6 @@ import java.io.IOException;
 
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Optional;
 
 @WebServlet("/customers/*")
 public class CustomerServlet extends HttpServlet {
@@ -26,10 +26,10 @@ public class CustomerServlet extends HttpServlet {
 
     private CustomerService customerService;
 
-    @Override
+        @Override
     public void init() throws ServletException {
         super.init();
-        customerService = new CustomerService();
+        customerService = (CustomerService) getServletContext().getAttribute("customerService");
     }
 
     @Override
@@ -93,6 +93,8 @@ public class CustomerServlet extends HttpServlet {
             throw new RuntimeException(e);
         }
     }
+
+
 
 }
 

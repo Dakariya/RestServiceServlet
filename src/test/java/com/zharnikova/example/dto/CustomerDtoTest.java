@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CustomerDtoTest {
     @Test
-    public void testConstructorWithId() {
+     void testConstructorWithId() {
 
         int id = 1;
         String name = "John Doe";
@@ -25,7 +25,7 @@ class CustomerDtoTest {
     }
 
     @Test
-    public void testConstructorWithoutId() {
+     void testConstructorWithoutId() {
 
         String name = "John Doe";
         String phone = "123-456-7890";
@@ -41,7 +41,7 @@ class CustomerDtoTest {
         assertEquals(email, customerDto.getEmail());
     }
     @Test
-    public void testEquals() {
+     void testEquals() {
 
         CustomerDto customerDto1 = new CustomerDto(1, "John Doe", "123-456-7890", "john.doe@example.com");
         CustomerDto customerDto2 = new CustomerDto(1, "John Doe", "123-456-7890", "john.doe@example.com");
@@ -53,7 +53,7 @@ class CustomerDtoTest {
     }
 
     @Test
-    public void testHashCode() {
+     void testHashCode() {
 
         CustomerDto customerDto1 = new CustomerDto(1, "John Doe", "123-456-7890", "john.doe@example.com");
         CustomerDto customerDto2 = new CustomerDto(1, "John Doe", "123-456-7890", "john.doe@example.com");
@@ -65,7 +65,7 @@ class CustomerDtoTest {
     }
 
     @Test
-    public void testToString() {
+     void testToString() {
 
         CustomerDto customerDto = new CustomerDto(1, "John Doe", "123-456-7890", "john.doe@example.com");
 

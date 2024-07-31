@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CustomerProductMapperTest {
 
     @Test
-    public void testMapToCustomerProductDto() {
+     void testMapToCustomerProductDto() {
         // Создаём объект CustomersProducts
         CustomersProducts customersProducts = new CustomersProducts();
         customersProducts.setCustomer_name("John Doe");
@@ -24,7 +24,7 @@ class CustomerProductMapperTest {
     }
 
     @Test
-    public void testMapToCustomerProduct() {
+     void testMapToCustomerProduct() {
         // Создаём объект CustomerProductDto
         CustomerProductDto dto = new CustomerProductDto();
         dto.setCustomer_name("Jane Doe");

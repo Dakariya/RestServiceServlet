@@ -13,7 +13,7 @@ class CustomersProductsTest {
     }
 
     @Test
-    public void testEquals() {
+     void testEquals() {
         CustomersProducts cp1 = new CustomersProducts("John Doe", "Product A");
         CustomersProducts cp2 = new CustomersProducts("John Doe", "Product A");
         CustomersProducts cp3 = new CustomersProducts("Jane Doe", "Product B");
@@ -23,7 +23,7 @@ class CustomersProductsTest {
     }
 
     @Test
-    public void testHashCode() {
+     void testHashCode() {
         CustomersProducts cp1 = new CustomersProducts("John Doe", "Product A");
         CustomersProducts cp2 = new CustomersProducts("Jane Doe", "Product B");
 
@@ -31,7 +31,7 @@ class CustomersProductsTest {
     }
 
     @Test
-    public void testToString() {
+     void testToString() {
         CustomersProducts cp = new CustomersProducts("John Doe", "Product A");
 
         assertEquals("CustomersProducts{customer_name='John Doe', product_name='Product A'}", cp.toString());

@@ -1,6 +1,7 @@
 package com.zharnikova.example.service;
 
 import com.zharnikova.example.dao.CustomerDao;
+import com.zharnikova.example.dao.ProductDao;
 import com.zharnikova.example.dto.CustomerDto;
 import com.zharnikova.example.mapper.CustomerMapper;
 import com.zharnikova.example.model.Customer;
@@ -11,12 +12,11 @@ import java.util.List;
 import java.util.Optional;
 
 public class CustomerService {
-    private final CustomerDao customerDao;
+    private CustomerDao customerDao;
 
     public CustomerService() {
         this.customerDao = new CustomerDao();
     }
-
 
 
 
@@ -53,11 +53,11 @@ public class CustomerService {
     }
 
 
-    public void deleteCustomer(int id) {
+    public boolean deleteCustomer(int id) {
         try {
             customerDao.delete(id);
         } catch (SQLException e) {
             throw new RuntimeException(e);
-        }
+        } return true;
     }
 }

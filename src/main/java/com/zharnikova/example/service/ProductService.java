@@ -16,10 +16,16 @@ import java.util.List;
 import java.util.Optional;
 
 public class ProductService {
-    private final ProductDao productDao;
+    private ProductDao productDao;
 
     public ProductService() {
         this.productDao = new ProductDao();
+    }
+
+    private ProductRepository productRepository;
+
+    public ProductService(ProductRepository productRepository) {
+        this.productRepository = productRepository;
     }
 
     public List<ProductDto> getAll() {
@@ -62,7 +68,6 @@ public class ProductService {
 
 
     public List<CustomerProductDto> getCustomerProductNamesAll() {
-        ProductRepository productRepository = new ProductRepository();
         List<CustomersProducts> all = null;
         try {
             all = productRepository.getCustomerProductNames();
@@ -70,4 +75,6 @@ public class ProductService {
             return Collections.emptyList();
         } return all.stream().map(CustomerProductMapper::mapToCustomerProductDto).toList();
     }
+
+
 }

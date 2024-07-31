@@ -1,4 +1,5 @@
-FROM openjdk:22
-WORKDIR /app
-COPY /out/artifacts/RestServiceServlet_jar/RestServiceServlet.jar /app/servlet.jar
-CMD ["java", "-jar", "servlet.jar"]
+FROM tomcat:9.0.91
+WORKDIR /src/app
+COPY /target/untitled6.war /src/app
+EXPOSE 8080
+CMD ["catalina.sh", "run"]

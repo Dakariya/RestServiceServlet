@@ -10,27 +10,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c92312cd-8166-480f-9774-05b51fcb4a4b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/out/artifacts/RestServiceServlet_jar/RestServiceServlet.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/sql/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cbddb895-c227-41d4-a679-41468332a048.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cbddb895-c227-41d4-a679-41468332a048/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cbddb895-c227-41d4-a679-41468332a048/storage_v2/_src_/schema/mydb.Kl8zAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cbddb895-c227-41d4-a679-41468332a048/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cbddb895-c227-41d4-a679-41468332a048/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/963e0ecf-6262-4a3e-a131-e16fcedf7e79.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/963e0ecf-6262-4a3e-a131-e16fcedf7e79.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7779b32-0a85-46f3-907e-dd33a5a0011b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a7779b32-0a85-46f3-907e-dd33a5a0011b.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/RestServiceServlet_jar/RestServiceServlet.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/DataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/DataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/dao/CustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/dao/CustomerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/dto/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/dto/ProductDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/repository/ProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/servlet/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/servlet/CustomerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/servlet/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/servlet/ProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/MyTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/dao/CustomerDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/dao/CustomerDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/dto/CustomerDtoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/dto/CustomerDtoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/dto/ProductDtoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/dto/ProductDtoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/mapper/CustomerMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/mapper/CustomerMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/mapper/CustomerProductMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/mapper/CustomerProductMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/model/CustomersProductsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/model/CustomersProductsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/repository/ProductRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/repository/ProductRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/service/CustomerServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/service/CustomerServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/service/ProductServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/service/ProductServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/service/CustomerServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/service/ProductServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/servlet/CustomerServletTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/servlet/CustomersProdServletTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/servlet/ProductServletTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,18 +49,18 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -75,9 +83,10 @@
     "JUnit.All in RestServiceServlet (1).executor": "Coverage",
     "JUnit.All in RestServiceServlet (2).executor": "Coverage",
     "JUnit.All in RestServiceServlet.executor": "Coverage",
+    "JUnit.CustomerDaoTest,testGetById and 5 more.executor": "Run",
     "JUnit.CustomerDaoTest.executor": "Run",
     "JUnit.CustomerDaoTest.getAll_shouldCallDataSourceOnce.executor": "Run",
-    "JUnit.CustomerDaoTest.testAddCustomer.executor": "Run",
+    "JUnit.CustomerDaoTest.testAddCustomer.executor": "Debug",
     "JUnit.CustomerDaoTest.testDeleteCustomer.executor": "Run",
     "JUnit.CustomerDaoTest.testDeleteCustomer_Failure.executor": "Run",
     "JUnit.CustomerDaoTest.testDeleteCustomer_Success.executor": "Run",
@@ -88,19 +97,24 @@
     "JUnit.CustomerDaoTest.testUpdateCustomer.executor": "Run",
     "JUnit.CustomerDaoTest.testUpdate_ValidCustomer.executor": "Run",
     "JUnit.CustomerDaoUpdateTest.testUpdate_ValidCustomer.executor": "Run",
+    "JUnit.CustomerDtoTest.executor": "Run",
     "JUnit.CustomerDtoTest.testConstructorWithId.executor": "Run",
     "JUnit.CustomerDtoTest.testConstructorWithoutId.executor": "Run",
     "JUnit.CustomerDtoTest.testEquals.executor": "Run",
     "JUnit.CustomerDtoTest.testHashCode.executor": "Run",
     "JUnit.CustomerDtoTest.testToString.executor": "Run",
+    "JUnit.CustomerMapperTest.executor": "Run",
     "JUnit.CustomerMapperTest.testMapToCustomer.executor": "Run",
     "JUnit.CustomerMapperTest.testMapToCustomerDto.executor": "Run",
+    "JUnit.CustomerProductDtoTest.executor": "Run",
     "JUnit.CustomerProductDtoTest.testConstructor.executor": "Run",
     "JUnit.CustomerProductDtoTest.testEquals.executor": "Run",
     "JUnit.CustomerProductDtoTest.testHashCode.executor": "Run",
     "JUnit.CustomerProductDtoTest.testToString.executor": "Run",
+    "JUnit.CustomerProductMapperTest.executor": "Run",
     "JUnit.CustomerProductMapperTest.testMapToCustomerProduct.executor": "Run",
     "JUnit.CustomerProductMapperTest.testMapToCustomerProductDto.executor": "Run",
+    "JUnit.CustomerProductServiceTest.executor": "Run",
     "JUnit.CustomerServiceTest.executor": "Run",
     "JUnit.CustomerServiceTest.getAll.executor": "Run",
     "JUnit.CustomerServiceTest.getAll_shouldCallDataSourceOnce.executor": "Run",
@@ -109,21 +123,35 @@
     "JUnit.CustomerServiceTest.getByIdTest.executor": "Run",
     "JUnit.CustomerServiceTest.getConnection.executor": "Run",
     "JUnit.CustomerServiceTest.testAdd.executor": "Run",
+    "JUnit.CustomerServiceTest.testDeleteCustomer.executor": "Run",
     "JUnit.CustomerServiceTest.testGetAll.executor": "Debug",
     "JUnit.CustomerServiceTest.testGetAllCustomers.executor": "Debug",
+    "JUnit.CustomerServiceTest.testGetAllSQLException.executor": "Run",
     "JUnit.CustomerServiceTest.testGetById.executor": "Run",
     "JUnit.CustomerServiceTest.testUpdate.executor": "Run",
+    "JUnit.CustomerServiceTest.whenMockAnnotation.executor": "Run",
     "JUnit.CustomerServletTest.doGet.executor": "Run",
     "JUnit.CustomerServletTest.executor": "Run",
     "JUnit.CustomerServletTest.getAll.executor": "Debug",
     "JUnit.CustomerServletTest.testAdd.executor": "Run",
     "JUnit.CustomerServletTest.testAddCustomer.executor": "Debug",
     "JUnit.CustomerServletTest.testDoDelete.executor": "Run",
+    "JUnit.CustomerServletTest.testDoDelete_CustomerNotFound.executor": "Run",
+    "JUnit.CustomerServletTest.testDoDelete_Success.executor": "Run",
+    "JUnit.CustomerServletTest.testDoGetWithId.executor": "Debug",
+    "JUnit.CustomerServletTest.testDoGetWithoutId.executor": "Run",
+    "JUnit.CustomerServletTest.testDoPost.executor": "Run",
+    "JUnit.CustomerServletTest.testDoPut.executor": "Run",
+    "JUnit.CustomerServletTest.testDoPut_Exception.executor": "Run",
+    "JUnit.CustomerServletTest.testDoPut_Success.executor": "Run",
     "JUnit.CustomerServletTest.testGetAll.executor": "Run",
     "JUnit.CustomerServletTest.testGetById.executor": "Run",
     "JUnit.CustomerServletTest.testUpdate.executor": "Run",
     "JUnit.CustomerServletTest.testUpdateCustomer.executor": "Debug",
+    "JUnit.CustomerServletTest.testUpdateDatabaseError.executor": "Run",
+    "JUnit.CustomerServletTest.testUpdateInvalidId.executor": "Debug",
     "JUnit.CustomerServletTest.update.executor": "Run",
+    "JUnit.CustomerTest.executor": "Run",
     "JUnit.CustomerTest.testConstructorWithIdParameter.executor": "Run",
     "JUnit.CustomerTest.testConstructorWithoutIdParameter.executor": "Run",
     "JUnit.CustomerTest.testEqualsMethod.executor": "Run",
@@ -136,6 +164,7 @@
     "JUnit.CustomerUpdateTest.testUpdateCustomer.executor": "Run",
     "JUnit.CustomersProdServletTest.doGet.executor": "Run",
     "JUnit.CustomersProdServletTest.testDoGet.executor": "Run",
+    "JUnit.CustomersProductsTest.executor": "Run",
     "JUnit.CustomersProductsTest.testConstructor.executor": "Run",
     "JUnit.CustomersProductsTest.testEquals.executor": "Run",
     "JUnit.CustomersProductsTest.testHashCode.executor": "Run",
@@ -144,7 +173,9 @@
     "JUnit.DataSourceTest.testCreateSession.executor": "Debug",
     "JUnit.DataSourceTest.testDataSource.executor": "Run",
     "JUnit.DataSourceTest.testGetConnection.executor": "Run",
+    "JUnit.MyTest.executor": "Run",
     "JUnit.MyTest.testGetConnection.executor": "Run",
+    "JUnit.ProductDaoTest.executor": "Run",
     "JUnit.ProductDaoTest.testAdd.executor": "Debug",
     "JUnit.ProductDaoTest.testAddCustomer.executor": "Run",
     "JUnit.ProductDaoTest.testAddProduct.executor": "Run",
@@ -155,42 +186,65 @@
     "JUnit.ProductDaoTest.testUpdateProduct.executor": "Run",
     "JUnit.ProductDtoTest.constructorSetAllFields.executor": "Run",
     "JUnit.ProductDtoTest.constructor_shouldSetAllFields.executor": "Run",
+    "JUnit.ProductDtoTest.executor": "Run",
     "JUnit.ProductDtoTest.testEquals.executor": "Run",
     "JUnit.ProductDtoTest.testHashCode.executor": "Run",
     "JUnit.ProductDtoTest.testToString.executor": "Run",
     "JUnit.ProductMapperTest.MapProductToProductDto.executor": "Run",
+    "JUnit.ProductMapperTest.executor": "Run",
     "JUnit.ProductMapperTest.shouldMapProductDtoToProduct.executor": "Run",
+    "JUnit.ProductRepositoryTest.executor": "Run",
     "JUnit.ProductRepositoryTest.testGetCustomerProductNames.executor": "Run",
     "JUnit.ProductRepositoryTest.testGetCustomerProductNames1.executor": "Run",
-    "JUnit.ProductServiceTest.executor": "Run",
+    "JUnit.ProductServiceTest.executor": "Debug",
     "JUnit.ProductServiceTest.testAdd.executor": "Run",
+    "JUnit.ProductServiceTest.testAddProductSuccess.executor": "Run",
+    "JUnit.ProductServiceTest.testAddProductThrowsException.executor": "Run",
     "JUnit.ProductServiceTest.testDelete.executor": "Run",
+    "JUnit.ProductServiceTest.testDeleteThrowsRuntimeException.executor": "Run",
     "JUnit.ProductServiceTest.testGetAll.executor": "Run",
     "JUnit.ProductServiceTest.testGetAllSQLException.executor": "Run",
+    "JUnit.ProductServiceTest.testGetAll_Exception.executor": "Run",
+    "JUnit.ProductServiceTest.testGetAll_Success.executor": "Run",
     "JUnit.ProductServiceTest.testGetById.executor": "Run",
     "JUnit.ProductServiceTest.testGetCustomerProductNamesAll.executor": "Run",
+    "JUnit.ProductServiceTest.testGetCustomerProductNamesAllEmptyList.executor": "Run",
+    "JUnit.ProductServiceTest.testGetCustomerProductNamesAllSQLException.executor": "Run",
     "JUnit.ProductServiceTest.testUpdate.executor": "Run",
+    "JUnit.ProductServiceTest.testUpdateProductSuccess.executor": "Run",
+    "JUnit.ProductServiceTest.testUpdateProductThrowsException.executor": "Run",
+    "JUnit.ProductServletTest.executor": "Run",
     "JUnit.ProductServletTest.testDeleteProduct.executor": "Run",
+    "JUnit.ProductServletTest.testDoDelete.executor": "Run",
+    "JUnit.ProductServletTest.testDoDeleteWithInvalidId.executor": "Run",
     "JUnit.ProductServletTest.testDoGetWithIdParameter.executor": "Run",
+    "JUnit.ProductServletTest.testDoGetWithoutId.executor": "Run",
     "JUnit.ProductServletTest.testDoGetWithoutIdParameter.executor": "Run",
+    "JUnit.ProductServletTest.testDoPost.executor": "Run",
+    "JUnit.ProductServletTest.testDoPut.executor": "Run",
+    "JUnit.ProductServletTest.testDoPutWithInvalidData.executor": "Debug",
     "JUnit.ProductServletTest.testGetAll.executor": "Debug",
     "JUnit.ProductServletTest.testGetById.executor": "Run",
+    "JUnit.ProductTest.executor": "Run",
     "JUnit.ProductTest.testConstructorWithAllParameters.executor": "Run",
     "JUnit.ProductTest.testConstructorWithNameAndDescriptionParameters.executor": "Run",
     "JUnit.ProductTest.testEqualsMethod.executor": "Run",
     "JUnit.ProductTest.testHashCodeMethod.executor": "Run",
     "JUnit.ProductTest.testProductWithoutIdConstructor.executor": "Run",
     "JUnit.ProductTest.testToStringMethod.executor": "Run",
+    "Maven.RestServiceServlet [clean,package].executor": "Run",
     "Maven.RestServiceServlet [clean,test,install].executor": "Run",
+    "Maven.RestServiceServlet [clean,test,package].executor": "Run",
     "Maven.RestServiceServlet [clean,test].executor": "Run",
     "Maven.RestServiceServlet [package].executor": "Run",
     "Maven.RestServiceServlet [test].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat Server.Tomcat .executor": "Debug",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/zharn/IdeaProjects/RestServiceServlet",
@@ -199,10 +253,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.608046",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -223,88 +277,88 @@
       <recent name="C:\Users\zharn\IdeaProjects\RestServiceServlet\src\main\resources\sql" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="com.zharnikova.example.service" />
       <recent name="com.zharnikova.example.servlet" />
+      <recent name="com.zharnikova.example.service" />
       <recent name="com.zharnikova.example.dao" />
       <recent name="com.zharnikova.example" />
       <recent name="com.zharnikova.example.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProductServiceTest.testGetAll">
-    <configuration name="ProductServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CustomerServletTest.testDoPut">
+    <configuration name="CustomerServletTest.testDoPut" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestServiceServlet" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zharnikova.example.service.*" />
+          <option name="PATTERN" value="com.zharnikova.example.servlet.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.zharnikova.example.service" />
-      <option name="MAIN_CLASS_NAME" value="com.zharnikova.example.service.ProductServiceTest" />
+      <option name="PACKAGE_NAME" value="com.zharnikova.example.servlet" />
+      <option name="MAIN_CLASS_NAME" value="com.zharnikova.example.servlet.CustomerServletTest" />
+      <option name="METHOD_NAME" value="testDoPut" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServletTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestServiceServlet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zharnikova.example.servlet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zharnikova.example.servlet" />
+      <option name="MAIN_CLASS_NAME" value="com.zharnikova.example.servlet.ProductServletTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductServiceTest.testAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductServletTest.testDoDeleteWithInvalidId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestServiceServlet" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zharnikova.example.service.*" />
+          <option name="PATTERN" value="com.zharnikova.example.servlet.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.zharnikova.example.service" />
-      <option name="MAIN_CLASS_NAME" value="com.zharnikova.example.service.ProductServiceTest" />
-      <option name="METHOD_NAME" value="testAdd" />
+      <option name="PACKAGE_NAME" value="com.zharnikova.example.servlet" />
+      <option name="MAIN_CLASS_NAME" value="com.zharnikova.example.servlet.ProductServletTest" />
+      <option name="METHOD_NAME" value="testDoDeleteWithInvalidId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductServiceTest.testGetAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductServletTest.testDoPut" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestServiceServlet" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zharnikova.example.service.*" />
+          <option name="PATTERN" value="com.zharnikova.example.servlet.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.zharnikova.example.service" />
-      <option name="MAIN_CLASS_NAME" value="com.zharnikova.example.service.ProductServiceTest" />
-      <option name="METHOD_NAME" value="testGetAll" />
+      <option name="PACKAGE_NAME" value="com.zharnikova.example.servlet" />
+      <option name="MAIN_CLASS_NAME" value="com.zharnikova.example.servlet.ProductServletTest" />
+      <option name="METHOD_NAME" value="testDoPut" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductServiceTest.testGetById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductServletTest.testDoPutWithInvalidData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestServiceServlet" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zharnikova.example.service.*" />
+          <option name="PATTERN" value="com.zharnikova.example.servlet.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.zharnikova.example.service" />
-      <option name="MAIN_CLASS_NAME" value="com.zharnikova.example.service.ProductServiceTest" />
-      <option name="METHOD_NAME" value="testGetById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductServiceTest.testUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RestServiceServlet" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zharnikova.example.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.zharnikova.example.service" />
-      <option name="MAIN_CLASS_NAME" value="com.zharnikova.example.service.ProductServiceTest" />
-      <option name="METHOD_NAME" value="testUpdate" />
+      <option name="PACKAGE_NAME" value="com.zharnikova.example.servlet" />
+      <option name="MAIN_CLASS_NAME" value="com.zharnikova.example.servlet.ProductServletTest" />
+      <option name="METHOD_NAME" value="testDoPutWithInvalidData" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -398,26 +452,28 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ProductServiceTest" />
-      <item itemvalue="JUnit.ProductServiceTest.testAdd" />
-      <item itemvalue="JUnit.ProductServiceTest.testGetAll" />
-      <item itemvalue="JUnit.ProductServiceTest.testGetById" />
-      <item itemvalue="JUnit.ProductServiceTest.testUpdate" />
+      <item itemvalue="JUnit.CustomerServletTest.testDoPut" />
+      <item itemvalue="JUnit.ProductServletTest" />
+      <item itemvalue="JUnit.ProductServletTest.testDoDeleteWithInvalidId" />
+      <item itemvalue="JUnit.ProductServletTest.testDoPut" />
+      <item itemvalue="JUnit.ProductServletTest.testDoPutWithInvalidData" />
       <item itemvalue="Tomcat Server.Tomcat " />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ProductServiceTest.testGetAll" />
-        <item itemvalue="JUnit.ProductServiceTest" />
-        <item itemvalue="JUnit.ProductServiceTest.testGetById" />
-        <item itemvalue="JUnit.ProductServiceTest.testUpdate" />
-        <item itemvalue="JUnit.ProductServiceTest.testAdd" />
+        <item itemvalue="JUnit.CustomerServletTest.testDoPut" />
+        <item itemvalue="JUnit.ProductServletTest.testDoPutWithInvalidData" />
+        <item itemvalue="JUnit.ProductServletTest" />
+        <item itemvalue="JUnit.ProductServletTest.testDoPut" />
+        <item itemvalue="JUnit.ProductServletTest.testDoDeleteWithInvalidId" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
+        <option value="jdk-11.0.22-corretto-11.0.22-4caba194b151-868cef46" />
+        <option value="jdk-17.0.9-corretto-17.0.9-4caba194b151-107bc6b7" />
         <option value="jdk-22-openjdk-22-4caba194b151-f504ca98" />
       </set>
     </attachedChunks>
@@ -431,7 +487,10 @@
       <option name="presentableId" value="Default" />
       <updated>1721935238494</updated>
       <workItem from="1721935239474" duration="79474000" />
-      <workItem from="1722146533908" duration="27738000" />
+      <workItem from="1722146533908" duration="29611000" />
+      <workItem from="1722262747315" duration="7000" />
+      <workItem from="1722274355783" duration="24955000" />
+      <workItem from="1722429207100" duration="6968000" />
     </task>
     <servers />
   </component>
@@ -450,8 +509,8 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/RestServiceServlet$All_in_RestServiceServlet__1_.ic" NAME="All in RestServiceServlet (1) Coverage Results" MODIFIED="1722091780709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/RestServiceServlet$All_in_RestServiceServlet.ic" NAME="All in RestServiceServlet Coverage Results" MODIFIED="1722101603704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/RestServiceServlet$All_in_RestServiceServlet__1_.ic" NAME="All in RestServiceServlet (1) Coverage Results" MODIFIED="1722333925211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/RestServiceServlet$All_in_RestServiceServlet.ic" NAME="All in RestServiceServlet Coverage Results" MODIFIED="1722333739978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/RestServiceServlet$All_in_RestServiceServlet__2_.ic" NAME="All in RestServiceServlet (2) Coverage Results" MODIFIED="1722020395107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

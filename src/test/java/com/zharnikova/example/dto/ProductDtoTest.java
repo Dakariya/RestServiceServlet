@@ -1,9 +1,7 @@
 package com.zharnikova.example.dto;
 
-import com.zharnikova.example.service.CustomerService;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 

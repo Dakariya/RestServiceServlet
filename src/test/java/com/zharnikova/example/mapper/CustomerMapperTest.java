@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CustomerMapperTest {
 
     @Test
-    public void testMapToCustomerDto() {
+     void testMapToCustomerDto() {
         Customer customer = new Customer(1, "John Doe", "123-456-7890", "john.doe@example.com");
         CustomerDto expectedDto = new CustomerDto(1, "John Doe", "123-456-7890", "john.doe@example.com");
         CustomerDto actualDto = CustomerMapper.mapToCustomerDto(customer);
@@ -17,7 +17,7 @@ class CustomerMapperTest {
     }
 
     @Test
-    public void testMapToCustomer() {
+     void testMapToCustomer() {
         CustomerDto dto = new CustomerDto(1, "John Doe", "123-456-7890", "john.doe@example.com");
         Customer expectedCustomer = new Customer(1, "John Doe", "123-456-7890", "john.doe@example.com");
         Customer actualCustomer = CustomerMapper.mapToCustomer(dto);

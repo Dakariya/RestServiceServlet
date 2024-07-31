@@ -1,131 +1,102 @@
 package com.zharnikova.example.servlet;
 
-import com.zharnikova.example.dao.ProductDao;
 import com.zharnikova.example.dto.ProductDto;
 import com.zharnikova.example.model.Product;
-
 import com.zharnikova.example.service.ProductService;
+import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.powermock.api.mockito.PowerMockito;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import java.io.IOException;
-import java.sql.SQLException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.verify;
-import static org.powermock.api.mockito.PowerMockito.when;
+import static org.mockito.Mockito.*;
 
+@ExtendWith(MockitoExtension.class)
 class ProductServletTest {
-    @Test
-    void testGetById() {
-        // Arrange: Create an instance of CustomerDao (assuming it's properly initialized)
-        ProductService productService = new ProductService();
+    @InjectMocks
+    private ProductServlet servlet;
 
-        // Act: Call the method with a specific customer ID
-        int productIdToRetrieve = 12; // Replace with an actual customer ID
-        Optional<Product> result = productService.getById(productIdToRetrieve);
+    @Mock
+    private ProductService productService;
 
-        // Assert: Verify the expected behavior
-        assertTrue(result.isPresent(), "Customer should exist");
-        Product retrievedProduct = result.get();
-        assertEquals(productIdToRetrieve, retrievedProduct.getId(), "IDs should match");
-        // Add more assertions based on your specific requirements
+    @Mock
+    private HttpServletRequest request;
 
-        // Optional: Print the retrieved customer details for debugging
-        System.out.println("Retrieved customer: " + retrievedProduct.getName() + " - " + retrievedProduct.getDescription());
+    @Mock
+    private HttpServletResponse response;
+    @Mock
+    private RequestDispatcher requestDispatcher;
+
+    @BeforeEach
+    public void setUp() {
+        MockitoAnnotations.initMocks(this);
     }
 
     @Test
-    void testGetAll() {
-        // Arrange: Create an instance of CustomerDao (assuming it's properly initialized)
-        ProductService productService = new ProductService();
+     void testDoPost() throws ServletException, IOException {
+        when(request.getParameter("name")).thenReturn("Test Product");
+        when(request.getParameter("description")).thenReturn("Test Description");
+        when(request.getParameter("price")).thenReturn("99.99");
+        when(request.getParameter("stock")).thenReturn("10");
 
-        // Act: Call the method
-        List<ProductDto> result;
-        result = productService.getAll();
+        servlet.doPost(request, response);
 
-        // Assert: Verify the expected behavior
-        assertNotNull(result, "Result should not be null");
-        // Add more assertions based on your specific requirements
-
-        // Optional: Print the results for debugging
-        result.forEach(customer -> System.out.println(customer.getName() + " - " + customer.getDescription()));
+        verify(productService).add(any(Product.class));
     }
 
 
     @Test
-    void testDeleteProduct() throws SQLException {
-        Product newProduct = new Product();
-        newProduct.setId(15);
-        newProduct.setName("milk");
-        newProduct.setDescription("product");
-        newProduct.setPrice(120.0);
-        newProduct.setStock(10);
+     void testDoGetWithoutId() throws ServletException, IOException {
+        when(request.getParameter("id")).thenReturn(null);
+        List<ProductDto> productDtos = Arrays.asList(new ProductDto(1,"Test Product", "Test Description", 99.99, 10));
+        when(productService.getAll()).thenReturn(productDtos);
+        when(request.getRequestDispatcher("views/products.jsp")).thenReturn(requestDispatcher);
 
-        ProductDao productDao = new ProductDao();
-        try {
-            // Add the customer to the database
-            productDao.delete(2);
+        servlet.doGet(request, response);
 
-            // Verify that the customer was added successfully
-            Optional<Product> retrievedProduct = productDao.getById(newProduct.getId());
-            assertTrue(retrievedProduct.isPresent());
-            assertEquals(newProduct.getId(), retrievedProduct.get().getId());
-            assertEquals(newProduct.getName(), retrievedProduct.get().getName());
-            assertEquals(newProduct.getDescription(), retrievedProduct.get().getDescription());
-            assertEquals(newProduct.getPrice(), retrievedProduct.get().getPrice());
-            assertEquals(newProduct.getStock(), retrievedProduct.get().getStock());
-        } catch (SQLException e) {
-
-        }
-    }
-
-//    private HttpServletRequest mockRequest;
-//
-//    private HttpServletResponse mockResponse;
-//
-//    private RequestDispatcher mockRequestDispatcher;
-//
-//    private ProductServlet productServlet;
-
-    @Test
-    void testDoGetWithIdParameter() throws ServletException, IOException {
-        // Arrange
-//        String productId = "123"; // Example product ID
-//        when(mockRequest.getParameter("id")).thenReturn(productId);
-//        when(mockRequest.getRequestDispatcher("views/product.jsp")).thenReturn(mockRequestDispatcher);
-//
-//        // Act
-//        productServlet.doGet(mockRequest, mockResponse);
-//
-//        // Assert
-//        verify(mockRequest).setAttribute(eq("product"), any()); // Verify that the product attribute is set
-//        verify(mockRequestDispatcher).forward(mockRequest, mockResponse); // Verify forwarding
+        verify(request).setAttribute("products", productDtos);
+        verify(requestDispatcher).forward(request, response);
     }
 
     @Test
-    void testDoGetWithoutIdParameter() throws ServletException, IOException {
-//        // Arrange
-//        when(mockRequest.getParameter("id")).thenReturn(null); // No ID provided
-//        when(mockRequest.getRequestDispatcher("views/products.jsp")).thenReturn(mockRequestDispatcher);
-//
-//        // Act
-//        productServlet.doGet(mockRequest, mockResponse);
-//
-//        // Assert
-//        verify(mockRequest).setAttribute(eq("products"), any()); // Verify that the products attribute is set
-//        verify(mockRequestDispatcher).forward(mockRequest, mockResponse); // Verify forwarding
-//    }
+     void testDoPut() throws Exception {
+        when(request.getParameter("id")).thenReturn("1");
+        when(request.getParameter("name")).thenReturn("Test Product");
+        when(request.getParameter("description")).thenReturn("Test Description");
+        when(request.getParameter("price")).thenReturn("99.99");
+        when(request.getParameter("stock")).thenReturn("10");
+
+        servlet.doPut(request, response);
+
+        verify(productService, times(1)).update(any(Product.class));
+        verify(response).setStatus(HttpServletResponse.SC_OK);
     }
+    @Test
+     void testDoDelete() throws Exception {
+        when(request.getParameter("id")).thenReturn("1");
+
+        servlet.doDelete(request, response);
+
+        verify(productService, times(1)).delete(1);
+        verify(response).setStatus(HttpServletResponse.SC_OK);
+    }
+
+
 }
