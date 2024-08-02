@@ -1,3 +1,5 @@
 Manifest-Version: 1.0
-Main-Class: MyApp.java
+Main-Class: com.zharnikova.example.MyApp
+Class-Path: mysql-connector-j-8.0.33.jar protobuf-java-3.21.9.jar Hikari
+ CP-5.0.1.jar slf4j-api-2.0.7.jar
 

@@ -25,8 +25,6 @@ public class ProductDto {
         this.stock = stock;
     }
 
-    public ProductDto(String testProduct, String testDescription, double v, int i) {
-    }
 
 
     public Integer getId() {

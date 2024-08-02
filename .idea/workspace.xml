@@ -10,35 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c92312cd-8166-480f-9774-05b51fcb4a4b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/963e0ecf-6262-4a3e-a131-e16fcedf7e79.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/963e0ecf-6262-4a3e-a131-e16fcedf7e79.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7779b32-0a85-46f3-907e-dd33a5a0011b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a7779b32-0a85-46f3-907e-dd33a5a0011b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/RestServiceServlet_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/RestServiceServlet_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/RestServiceServlet_jar/RestServiceServlet.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/dao/CustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/dao/CustomerDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/dto/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/dto/ProductDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/service/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/servlet/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/servlet/CustomerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/servlet/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zharnikova/example/servlet/ProductServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/MyTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/dao/CustomerDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/dao/CustomerDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/dto/CustomerDtoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/dto/CustomerDtoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/dto/ProductDtoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/dto/ProductDtoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/mapper/CustomerMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/mapper/CustomerMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/mapper/CustomerProductMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/mapper/CustomerProductMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/model/CustomersProductsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/model/CustomersProductsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/repository/ProductRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/repository/ProductRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/service/CustomerServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/service/ProductServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/servlet/CustomerServletTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/servlet/CustomersProdServletTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zharnikova/example/servlet/ProductServletTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +229,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.608046",
     "settings.editor.selected.configurable": "preferences.keymap",
@@ -284,7 +260,32 @@
       <recent name="com.zharnikova.example.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CustomerServletTest.testDoPut">
+  <component name="RunManager" selected="Tomcat Server.Tomcat ">
+    <configuration name="All in RestServiceServlet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestServiceServlet" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerDtoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestServiceServlet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zharnikova.example.dto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zharnikova.example.dto" />
+      <option name="MAIN_CLASS_NAME" value="com.zharnikova.example.dto.CustomerDtoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CustomerServletTest.testDoPut" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestServiceServlet" />
       <extension name="coverage">
@@ -312,38 +313,6 @@
       <option name="PACKAGE_NAME" value="com.zharnikova.example.servlet" />
       <option name="MAIN_CLASS_NAME" value="com.zharnikova.example.servlet.ProductServletTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductServletTest.testDoDeleteWithInvalidId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RestServiceServlet" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zharnikova.example.servlet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.zharnikova.example.servlet" />
-      <option name="MAIN_CLASS_NAME" value="com.zharnikova.example.servlet.ProductServletTest" />
-      <option name="METHOD_NAME" value="testDoDeleteWithInvalidId" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductServletTest.testDoPut" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RestServiceServlet" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zharnikova.example.servlet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.zharnikova.example.servlet" />
-      <option name="MAIN_CLASS_NAME" value="com.zharnikova.example.servlet.ProductServletTest" />
-      <option name="METHOD_NAME" value="testDoPut" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -452,20 +421,20 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.All in RestServiceServlet" />
+      <item itemvalue="JUnit.CustomerDtoTest" />
       <item itemvalue="JUnit.CustomerServletTest.testDoPut" />
       <item itemvalue="JUnit.ProductServletTest" />
-      <item itemvalue="JUnit.ProductServletTest.testDoDeleteWithInvalidId" />
-      <item itemvalue="JUnit.ProductServletTest.testDoPut" />
       <item itemvalue="JUnit.ProductServletTest.testDoPutWithInvalidData" />
       <item itemvalue="Tomcat Server.Tomcat " />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in RestServiceServlet" />
+        <item itemvalue="JUnit.CustomerDtoTest" />
         <item itemvalue="JUnit.CustomerServletTest.testDoPut" />
         <item itemvalue="JUnit.ProductServletTest.testDoPutWithInvalidData" />
         <item itemvalue="JUnit.ProductServletTest" />
-        <item itemvalue="JUnit.ProductServletTest.testDoPut" />
-        <item itemvalue="JUnit.ProductServletTest.testDoDeleteWithInvalidId" />
       </list>
     </recent_temporary>
   </component>
@@ -490,7 +459,7 @@
       <workItem from="1722146533908" duration="29611000" />
       <workItem from="1722262747315" duration="7000" />
       <workItem from="1722274355783" duration="24955000" />
-      <workItem from="1722429207100" duration="6968000" />
+      <workItem from="1722429207100" duration="10545000" />
     </task>
     <servers />
   </component>
@@ -510,7 +479,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/RestServiceServlet$All_in_RestServiceServlet__1_.ic" NAME="All in RestServiceServlet (1) Coverage Results" MODIFIED="1722333925211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/RestServiceServlet$All_in_RestServiceServlet.ic" NAME="All in RestServiceServlet Coverage Results" MODIFIED="1722333739978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/RestServiceServlet$All_in_RestServiceServlet.ic" NAME="All in RestServiceServlet Coverage Results" MODIFIED="1722439272360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/RestServiceServlet$All_in_RestServiceServlet__2_.ic" NAME="All in RestServiceServlet (2) Coverage Results" MODIFIED="1722020395107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -26,10 +26,10 @@ public class CustomerServlet extends HttpServlet {
 
     private CustomerService customerService;
 
-        @Override
+    @Override
     public void init() throws ServletException {
         super.init();
-        customerService = (CustomerService) getServletContext().getAttribute("customerService");
+        customerService = new CustomerService();
     }
 
     @Override
@@ -93,7 +93,6 @@ public class CustomerServlet extends HttpServlet {
             throw new RuntimeException(e);
         }
     }
-
 
 
 }

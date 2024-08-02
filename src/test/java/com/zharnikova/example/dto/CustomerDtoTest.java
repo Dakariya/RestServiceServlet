@@ -7,6 +7,43 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CustomerDtoTest {
     @Test
+    public void testNoArgsConstructor() {
+        CustomerDto customer = new CustomerDto();
+        assertNotNull(customer);
+    }
+
+    @Test
+    public void testAllArgsConstructor() {
+        CustomerDto customer = new CustomerDto(1, "John Doe", "1234567890", "john.doe@example.com");
+        assertEquals(1, customer.getId());
+        assertEquals("John Doe", customer.getName());
+        assertEquals("1234567890", customer.getPhone());
+        assertEquals("john.doe@example.com", customer.getEmail());
+    }
+
+    @Test
+    public void testPartialArgsConstructor() {
+        CustomerDto customer = new CustomerDto("Jane Doe", "0987654321", "jane.doe@example.com");
+        assertEquals("Jane Doe", customer.getName());
+        assertEquals("0987654321", customer.getPhone());
+        assertEquals("jane.doe@example.com", customer.getEmail());
+    }
+
+    @Test
+    public void testSettersAndGetters() {
+        CustomerDto customer = new CustomerDto();
+        customer.setId(2);
+        customer.setName("Alice");
+        customer.setPhone("1112223333");
+        customer.setEmail("alice@example.com");
+
+        assertEquals(2, customer.getId());
+        assertEquals("Alice", customer.getName());
+        assertEquals("1112223333", customer.getPhone());
+        assertEquals("alice@example.com", customer.getEmail());
+    }
+
+    @Test
      void testConstructorWithId() {
 
         int id = 1;
